@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Weather App</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Description of website" />
+        <link rel="stylesheet" href="Styles/Style.css" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet" >
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+        <!-- Contains all elements of welcome page -->
+        <div id="welcomeContainer" style="text-align: center;">
+            <div id="welcomePage">
+                <h1 id="welcomeText">Weather.io</h1>
+            </div>
+
+            <input type="text" id="citySelectInput" placeholder="Where are you?" onfocus="this.placeholder = ''">
+            <button onclick="getCity()" id="citySelectButton">Let's go!</button>
+            <footer id="welcomeFooter">2021 copyright Cormac McManus</footer>
+        </div>
+
+        
+        <!-- Contains all elements of weather page -->
+        <div id="weatherPageContainer" style="text-align: center;">
+            <div id="weatherPage">
+
+                <!-- Container to seperate left hand column from primary content -->
+                <div class="container-fluid">
+                    <div class="row">
+                        <!-- Left hand column containing details about current days weather -->
+                        <div class="col-sm-4 left-col order-2 order-sm-1">
+                            <!-- Nested grid system -->
+                            <div class="container-fluid">
+
+                                <!-- Co-Ordinates -->
+                                <div class="row left-col-item">
+                                    <h3 id="co-ordinates-col" class="head-one">CO-ORDINATES</h3>
+                                    <h3 class="res-one" id="co-ordinates-res">-</h3>
+
+                                </div>
+
+                                <!-- Humidity -->
+                                <div class="row left-col-item">
+                                    <h3 id="humidity-col" class="head-one">HUMIDITY</h3>
+                                    <h3 class="res-one" id="humidity-res">-</h3>
+                                </div>
+
+                                <!-- Wind Speed -->
+                                <div class="row left-col-item">
+                                    <h3 id="wind-speed-col" class="head-one">WIND SPEED</h3>
+                                    <h3 class="res-one" id="wind-speed-res">-</h3>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Right hand column containing main page content -->
+                        <div class="col-sm-8 order-1 order-sm-2">
+                            <div class="container-fluid">
+                                <h3 id="locationName"> - </h3>
+                                <object type="image/svg+xml" id="weatherIcon"></object>
+                                <h3 id="weatherTypeAndTemp"> - </h3>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scripts --> 
+        <script src="/Scripts/Custom.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+</html>
