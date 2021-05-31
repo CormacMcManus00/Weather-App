@@ -122,7 +122,7 @@ function setFirstHeading(){
 }
 
 function setWeatherInfo(){
-    let iconsPath = "/Icons/weather-icons-master/svg/";
+    let iconsPath = "./Icons/weather-icons-master/svg/";
     let weather_img_display = document.getElementById("weatherIcon");
     console.log("Weather code = " + weatherCode);
 
